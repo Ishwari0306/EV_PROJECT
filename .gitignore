@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+*.joblib
+*.sqlite
+.ipynb_checkpoints/
+.DS_Store
+# data files (track explicitly)
+data/
