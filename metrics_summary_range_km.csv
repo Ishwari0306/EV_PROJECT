@@ -1,0 +1,7 @@
+model,cv_r2_mean,cv_r2_std,test_r2,rmse,mae,model_file,avp_plot,res_plot
+RandomForest,0.9532,0.0165,0.9644,0.1880,0.1351,model_RandomForest_range_retrained.joblib,plots_range_retrained/RandomForest_avp.png,plots_range_retrained/RandomForest_res.png
+GradientBoosting,0.9628,0.0142,0.9723,0.1658,0.1241,model_GradientBoosting_range_retrained.joblib,plots_range_retrained/GradientBoosting_avp.png,plots_range_retrained/GradientBoosting_res.png
+DecisionTree,0.9158,0.0198,0.9545,0.2128,0.1418,model_DecisionTree_range_retrained.joblib,plots_range_retrained/DecisionTree_avp.png,plots_range_retrained/DecisionTree_res.png
+KNN,0.8027,0.0370,0.7990,0.4470,0.3282,model_KNN_range_retrained.joblib,plots_range_retrained/KNN_avp.png,plots_range_retrained/KNN_res.png
+SVR,0.9436,0.0160,0.9782,0.1473,0.1156,model_SVR_range_retrained.joblib,plots_range_retrained/SVR_avp.png,plots_range_retrained/SVR_res.png
+Ridge,0.9566,0.0128,0.9626,0.1929,0.1545,model_Ridge_range_retrained.joblib,plots_range_retrained/Ridge_avp.png,plots_range_retrained/Ridge_res.png

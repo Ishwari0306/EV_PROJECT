@@ -152,3 +152,38 @@ git push -u origin main
 ```
 
 If the cleaned CSV is large (it isn't in your case) you would instead use Git LFS or host the dataset externally and include a README link.
+
+## Best model (summary)
+
+After preprocessing and model comparison focused on predicting `range_km`, the best-performing model on the held-out test split was:
+
+- Model: SVR (Support Vector Regressor)
+- Saved artifact: `model_SVR_range_retrained.joblib`
+- Test metrics (holdout test set): R² ≈ 0.9782, RMSE ≈ 0.147 (scaled units), MAE ≈ 0.116
+- Explainability artifacts: `plots_range_retrained/SVR_avp.png` (Actual vs Predicted), `plots_range_retrained/SVR_res.png` (residuals), `plots_range_retrained/SVR_permutation_importances.png`
+
+Why SVR?
+- It achieved the highest R² on the holdout test split and showed stable performance in nested CV for robustness checks.
+
+How to load and use the saved model
+
+```python
+import joblib, pandas as pd
+# load the full pipeline (preprocessor + model) if you saved a combined pipeline, or load preprocessor + model separately
+pipeline = joblib.load('model_SVR_range_retrained.joblib')
+# if pipeline is a sklearn Pipeline, you can call pipeline.predict(raw_df)
+# otherwise, apply preprocessor first then model.predict
+
+raw = pd.DataFrame([{
+   # fill with the raw input column names used in training
+   'battery_capacity_kwh': 75,
+   'efficiency_wh_per_km': 180,
+   # ... other required columns
+}])
+pred = pipeline.predict(raw)
+print('Predicted range_km:', pred[0])
+```
+
+Notes / Caveats
+- Confirm that `raw` contains the same columns and types as the training raw DataFrame (including categorical columns). If you saved separate preprocessor and model objects use them in order: `X = preprocessor.transform(raw)` then `model.predict(X)`.
+
