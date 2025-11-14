@@ -6,12 +6,27 @@ import streamlit as st
 
 st.set_page_config(page_title='EV Range Explorer', layout='wide')
 
-ROOT = os.path.dirname(__file__)
+# Determine repository root robustly. In some Streamlit runtimes __file__ can be empty,
+# so fall back to the current working directory when needed.
+try:
+    ROOT = os.path.abspath(os.path.dirname(__file__))
+    if not ROOT:
+        raise NameError()
+except Exception:
+    ROOT = os.getcwd()
 
 @st.cache_resource
 def list_models():
-    files = [f for f in os.listdir(ROOT) if f.startswith('model_') and f.endswith('.joblib')]
-    return sorted(files)
+    try:
+        files = [f for f in os.listdir(ROOT) if f.startswith('model_') and f.endswith('.joblib')]
+        return sorted(files)
+    except FileNotFoundError:
+        # If ROOT is invalid for any reason, return empty list (UI will show an error)
+        return []
+    except Exception as e:
+        # log exception to the app (so user can see it in the UI) and return empty list
+        st.error(f'Error listing models: {e}')
+        return []
 
 @st.cache_resource
 def load_model(path):
@@ -96,8 +111,58 @@ with col1:
             'width_mm': width,
             'height_mm': height
         }])
+        # Build a full input row matching the model's expected feature names.
+        # Prefer medians from preprocessed features file when available.
+        expected = getattr(model, 'feature_names_in_', None)
+        defaults = {}
+        preproc_file = os.path.join(ROOT, 'features_standard_scaled.csv')
+        if os.path.exists(preproc_file):
+            try:
+                df_defaults = pd.read_csv(preproc_file)
+            except Exception:
+                df_defaults = None
+        else:
+            df_defaults = None
+
+        # manual inputs mapping (raw names used in training)
+        manual_map = {
+            'battery_capacity_kwh': battery,
+            'efficiency_wh_per_km': efficiency,
+            'top_speed_kmh': top_speed,
+            'acceleration_0_100_s': acc,
+            'length_mm': length,
+            'width_mm': width,
+            'height_mm': height,
+        }
+
+        row = {}
+        if expected is None:
+            # fallback: use manual_map only
+            row = manual_map
+        else:
+            for col in expected:
+                if col in manual_map:
+                    row[col] = manual_map[col]
+                else:
+                    # prefer median from preprocessed features if available
+                    if df_defaults is not None and col in df_defaults.columns:
+                        try:
+                            val = df_defaults[col].median()
+                            # ensure it's a python scalar
+                            row[col] = float(val) if pd.notna(val) else 0.0
+                        except Exception:
+                            # fallback to mode
+                            try:
+                                row[col] = df_defaults[col].mode().iat[0]
+                            except Exception:
+                                row[col] = 0
+                    else:
+                        # conservative fallback: 0 or False
+                        row[col] = 0
+
+        input_df = pd.DataFrame([row])
         try:
-            pred = model.predict(raw)
+            pred = model.predict(input_df)
             st.success(f'Predicted range_km: {float(pred[0]):.2f} (units as saved in model)')
         except Exception as e:
             st.error('Model prediction failed: ' + str(e))
