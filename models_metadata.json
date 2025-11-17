@@ -1,0 +1,29 @@
+{
+  "model_DecisionTree_range_retrained.joblib": {
+    "method": "use_file_scaler",
+    "scaler_ref": "scaler_standard.joblib"
+  },
+  "model_GradientBoosting_range_retrained.joblib": {
+    "method": "use_file_scaler",
+    "scaler_ref": "scaler_standard.joblib"
+  },
+  "model_KNN_range_retrained.joblib": {
+    "method": "use_file_scaler",
+    "scaler_ref": "scaler_standard.joblib"
+  },
+  "model_LinearRegression_retrained.joblib": {
+    "method": "use_file_scaler",
+    "scaler_ref": "scaler_standard.joblib"
+  },
+  "model_RandomForest_range_retrained.joblib": {
+    "method": "use_file_scaler",
+    "scaler_ref": "scaler_standard.joblib"
+  },
+  "model_Ridge_range_retrained.joblib": {
+    "method": "raw_km"
+  },
+  "model_SVR_range_retrained.joblib": {
+    "method": "use_file_scaler",
+    "scaler_ref": "scaler_standard.joblib"
+  }
+}

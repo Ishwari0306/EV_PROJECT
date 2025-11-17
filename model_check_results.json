@@ -1,0 +1,123 @@
+{
+  "models": [
+    {
+      "file": "model_DecisionTree_range_retrained.joblib",
+      "ok": true,
+      "raw": [
+        -0.3215755134488973
+      ],
+      "raw_val": -0.3215755134488973,
+      "missing_count": 25,
+      "rescaled": 174.48412245847737,
+      "method": "scaler:StandardScaler",
+      "target_stats": {
+        "min": 135.0,
+        "max": 685.0,
+        "mean": 393.1799163179916,
+        "std": 103.28733534137524
+      }
+    },
+    {
+      "file": "model_GradientBoosting_range_retrained.joblib",
+      "ok": true,
+      "raw": [
+        0.8963413431635274
+      ],
+      "raw_val": 0.8963413431635274,
+      "missing_count": 25,
+      "rescaled": 0.8963413431635274,
+      "method": "scaler:MinMaxScaler",
+      "target_stats": {
+        "min": 135.0,
+        "max": 685.0,
+        "mean": 393.1799163179916,
+        "std": 103.28733534137524
+      }
+    },
+    {
+      "file": "model_KNN_range_retrained.joblib",
+      "ok": true,
+      "raw": [
+        0.8705247852720654
+      ],
+      "raw_val": 0.8705247852720654,
+      "missing_count": 25,
+      "rescaled": 0.8705247852720654,
+      "method": "scaler:MinMaxScaler",
+      "target_stats": {
+        "min": 135.0,
+        "max": 685.0,
+        "mean": 393.1799163179916,
+        "std": 103.28733534137524
+      }
+    },
+    {
+      "file": "model_LinearRegression_retrained.joblib",
+      "ok": true,
+      "raw": [
+        -78.32231629503946
+      ],
+      "raw_val": -78.32231629503946,
+      "missing_count": 6,
+      "rescaled": 0.0,
+      "method": "rescale_prediction",
+      "target_stats": {
+        "min": 135.0,
+        "max": 685.0,
+        "mean": 393.1799163179916,
+        "std": 103.28733534137524
+      }
+    },
+    {
+      "file": "model_RandomForest_range_retrained.joblib",
+      "ok": true,
+      "raw": [
+        0.8569561639858106
+      ],
+      "raw_val": 0.8569561639858106,
+      "missing_count": 25,
+      "rescaled": 0.8569561639858106,
+      "method": "scaler:MinMaxScaler",
+      "target_stats": {
+        "min": 135.0,
+        "max": 685.0,
+        "mean": 393.1799163179916,
+        "std": 103.28733534137524
+      }
+    },
+    {
+      "file": "model_Ridge_range_retrained.joblib",
+      "ok": true,
+      "raw": [
+        65.92061391772992
+      ],
+      "raw_val": 65.92061391772992,
+      "missing_count": 25,
+      "rescaled": 65.92061391772992,
+      "method": "scaler:MinMaxScaler",
+      "target_stats": {
+        "min": 135.0,
+        "max": 685.0,
+        "mean": 393.1799163179916,
+        "std": 103.28733534137524
+      }
+    },
+    {
+      "file": "model_SVR_range_retrained.joblib",
+      "ok": true,
+      "raw": [
+        -0.25021269376553784
+      ],
+      "raw_val": -0.25021269376553784,
+      "missing_count": 25,
+      "rescaled": 176.92593871064466,
+      "method": "scaler:StandardScaler",
+      "target_stats": {
+        "min": 135.0,
+        "max": 685.0,
+        "mean": 393.1799163179916,
+        "std": 103.28733534137524
+      }
+    }
+  ]
+}

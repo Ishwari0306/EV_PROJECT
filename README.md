@@ -108,6 +108,25 @@ print('Predicted range_km:', pred[0])
 3. Add unit tests / small validation script that loads saved artifacts and runs a sanity prediction for a few examples.
 4. (Optional) Build a small API (FastAPI/Flask) wrapping the preprocessor + model for real-time predictions.
 
+### OpenAI API key (project setup)
+
+This project supports using the OpenAI API for enhanced assistant responses. For security we do NOT commit real API keys to the repository. Follow one of these options to configure a permanent local key for your machine:
+
+- Option A (recommended): Use Streamlit secrets (per-project, not committed)
+   1. Copy `.streamlit/secrets.example.toml` to `.streamlit/secrets.toml`.
+   2. Replace `sk-YOUR_KEY_HERE` with your real key.
+   3. Restart Streamlit (if running): `.\.venv\Scripts\python.exe -m streamlit run .\app_clean.py`.
+
+- Option B: Use a persistent user environment variable (applies to your Windows user)
+   1. Run in PowerShell: `setx OPENAI_API_KEY "sk-REPLACE_WITH_REAL_KEY"`
+   2. Close/reopen PowerShell. Start Streamlit from the new shell.
+
+- Option C: Run the provided helper script (recommended to automate and avoid BOM issues)
+   1. From the project root run (PowerShell): `.\setup_secret.ps1` and follow the prompt.
+   2. Or pass key non-interactively: `.\setup_secret.ps1 -Key "sk-REPLACE_WITH_REAL_KEY"`
+
+Note: Do not commit `.streamlit/secrets.toml` to source control. `.streamlit/` is already added to `.gitignore`.
+
 If you want, I can now run the hyperparameter tuning cell I planned, produce `tuned_models_results.csv`, and save the tuned best model artifacts.
 
 ---

@@ -1,0 +1,264 @@
+{
+  "models": [
+    {
+      "file": "model_DecisionTree_range_retrained.joblib",
+      "found_scaler": true,
+      "scaler_source": "scaler_standard.joblib",
+      "raw_pred": -0.3215755134488973,
+      "rescaled_via_scaler": 174.48412245847737,
+      "sensitivity": {
+        "battery": {
+          "inputs": [
+            40.0,
+            60.0,
+            80.0,
+            100.0
+          ],
+          "outputs": [
+            174.48412245847737,
+            174.48412245847737,
+            174.48412245847737,
+            174.48412245847737
+          ]
+        },
+        "efficiency": {
+          "inputs": [
+            120.0,
+            150.0,
+            200.0
+          ],
+          "outputs": [
+            174.48412245847737,
+            174.48412245847737,
+            174.48412245847737
+          ]
+        },
+        "battery_monotonic_increase": true,
+        "efficiency_monotonic_decrease": true
+      }
+    },
+    {
+      "file": "model_GradientBoosting_range_retrained.joblib",
+      "found_scaler": true,
+      "scaler_source": "scaler_standard.joblib",
+      "raw_pred": 0.7296349686056083,
+      "rescaled_via_scaler": 210.4533127303671,
+      "sensitivity": {
+        "battery": {
+          "inputs": [
+            40.0,
+            60.0,
+            80.0,
+            100.0
+          ],
+          "outputs": [
+            210.4533127303671,
+            210.4533127303671,
+            210.4533127303671,
+            210.4533127303671
+          ]
+        },
+        "efficiency": {
+          "inputs": [
+            120.0,
+            150.0,
+            200.0
+          ],
+          "outputs": [
+            210.4533127303671,
+            210.4533127303671,
+            210.4533127303671
+          ]
+        },
+        "battery_monotonic_increase": true,
+        "efficiency_monotonic_decrease": true
+      }
+    },
+    {
+      "file": "model_KNN_range_retrained.joblib",
+      "found_scaler": true,
+      "scaler_source": "scaler_standard.joblib",
+      "raw_pred": 0.6379198489362679,
+      "rescaled_via_scaler": 207.31510335506846,
+      "sensitivity": {
+        "battery": {
+          "inputs": [
+            40.0,
+            60.0,
+            80.0,
+            100.0
+          ],
+          "outputs": [
+            207.31510335506846,
+            207.31510335506846,
+            212.2894944000065,
+            212.2894944000065
+          ]
+        },
+        "efficiency": {
+          "inputs": [
+            120.0,
+            150.0,
+            200.0
+          ],
+          "outputs": [
+            207.31510335506846,
+            207.31510335506846,
+            212.2894944000065
+          ]
+        },
+        "battery_monotonic_increase": true,
+        "efficiency_monotonic_decrease": false
+      }
+    },
+    {
+      "file": "model_LinearRegression_retrained.joblib",
+      "found_scaler": true,
+      "scaler_source": "scaler_standard.joblib",
+      "raw_pred": 2.6046654928242927,
+      "rescaled_via_scaler": 274.61109163627225,
+      "sensitivity": {
+        "battery": {
+          "inputs": [
+            40.0,
+            60.0,
+            80.0,
+            100.0
+          ],
+          "outputs": [
+            -406.7560344581101,
+            274.61109163627225,
+            955.978217730655,
+            1637.3453438250374
+          ]
+        },
+        "efficiency": {
+          "inputs": [
+            120.0,
+            150.0,
+            200.0
+          ],
+          "outputs": [
+            257.07336578035245,
+            274.61109163627225,
+            303.84063472947196
+          ]
+        },
+        "battery_monotonic_increase": true,
+        "efficiency_monotonic_decrease": false
+      }
+    },
+    {
+      "file": "model_RandomForest_range_retrained.joblib",
+      "found_scaler": true,
+      "scaler_source": "scaler_standard.joblib",
+      "raw_pred": 0.8492026661079507,
+      "rescaled_via_scaler": 214.54455167371174,
+      "sensitivity": {
+        "battery": {
+          "inputs": [
+            40.0,
+            60.0,
+            80.0,
+            100.0
+          ],
+          "outputs": [
+            214.54455167371174,
+            214.54455167371174,
+            214.54455167371174,
+            214.54455167371174
+          ]
+        },
+        "efficiency": {
+          "inputs": [
+            120.0,
+            150.0,
+            200.0
+          ],
+          "outputs": [
+            214.54455167371174,
+            214.54455167371174,
+            214.54455167371174
+          ]
+        },
+        "battery_monotonic_increase": true,
+        "efficiency_monotonic_decrease": true
+      }
+    },
+    {
+      "file": "model_Ridge_range_retrained.joblib",
+      "found_scaler": false,
+      "scaler_source": null,
+      "raw_pred": 22.55339317701697,
+      "rescaled_via_scaler": null,
+      "sensitivity": {
+        "battery": {
+          "inputs": [
+            40.0,
+            60.0,
+            80.0,
+            100.0
+          ],
+          "outputs": [
+            356.7097531347762,
+            22.55339317701697,
+            40.102762608285076,
+            57.652132039553194
+          ]
+        },
+        "efficiency": {
+          "inputs": [
+            120.0,
+            150.0,
+            200.0
+          ],
+          "outputs": [
+            26.946653217233603,
+            22.55339317701697,
+            706.6554623948914
+          ]
+        },
+        "battery_monotonic_increase": false,
+        "efficiency_monotonic_decrease": false
+      }
+    },
+    {
+      "file": "model_SVR_range_retrained.joblib",
+      "found_scaler": true,
+      "scaler_source": "scaler_standard.joblib",
+      "raw_pred": -0.25021269376553784,
+      "rescaled_via_scaler": 176.92593871064466,
+      "sensitivity": {
+        "battery": {
+          "inputs": [
+            40.0,
+            60.0,
+            80.0,
+            100.0
+          ],
+          "outputs": [
+            176.92593871064466,
+            176.92593871064466,
+            176.92593871064466,
+            176.92593871064466
+          ]
+        },
+        "efficiency": {
+          "inputs": [
+            120.0,
+            150.0,
+            200.0
+          ],
+          "outputs": [
+            176.92593871064466,
+            176.92593871064466,
+            176.92593871064466
+          ]
+        },
+        "battery_monotonic_increase": true,
+        "efficiency_monotonic_decrease": true
+      }
+    }
+  ],
+  "updated_metadata_written": false
+}

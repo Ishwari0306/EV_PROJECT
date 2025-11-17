@@ -1,0 +1,936 @@
+[
+  {
+    "file": "model_DecisionTree_range_retrained.joblib",
+    "expected_features_count": 42,
+    "expected_features_sample": [
+      "top_speed_kmh",
+      "battery_capacity_kwh",
+      "number_of_cells",
+      "torque_nm",
+      "efficiency_wh_per_km",
+      "acceleration_0_100_s",
+      "fast_charging_power_kw_dc",
+      "towing_capacity_kg",
+      "cargo_volume_l",
+      "seats",
+      "length_mm",
+      "width_mm",
+      "height_mm",
+      "battery_type_Lithium-ion",
+      "fast_charge_port_CCS",
+      "fast_charge_port_CHAdeMO",
+      "drivetrain_AWD",
+      "drivetrain_FWD",
+      "drivetrain_RWD",
+      "segment_A - Mini",
+      "segment_B - Compact",
+      "segment_C - Medium",
+      "segment_D - Large",
+      "segment_E - Executive",
+      "segment_F - Luxury",
+      "segment_G - Sports",
+      "segment_I - Luxury",
+      "segment_JA - Mini",
+      "segment_JB - Compact",
+      "segment_JC - Medium",
+      "segment_JD - Large",
+      "segment_JE - Executive",
+      "segment_JF - Luxury",
+      "segment_N - Passenger Van",
+      "car_body_type_Cabriolet",
+      "car_body_type_Coupe",
+      "car_body_type_Hatchback",
+      "car_body_type_Liftback Sedan",
+      "car_body_type_SUV",
+      "car_body_type_Sedan"
+    ],
+    "pipeline_steps": [
+      "pre",
+      "model"
+    ],
+    "interesting_attrs": {
+      "feature_names_in_": [
+        "top_speed_kmh",
+        "battery_capacity_kwh",
+        "number_of_cells",
+        "torque_nm",
+        "efficiency_wh_per_km",
+        "acceleration_0_100_s",
+        "fast_charging_power_kw_dc",
+        "towing_capacity_kg",
+        "cargo_volume_l",
+        "seats",
+        "length_mm",
+        "width_mm",
+        "height_mm",
+        "battery_type_Lithium-ion",
+        "fast_charge_port_CCS",
+        "fast_charge_port_CHAdeMO",
+        "drivetrain_AWD",
+        "drivetrain_FWD",
+        "drivetrain_RWD",
+        "segment_A - Mini"
+      ]
+    },
+    "manual_mapped": [
+      {
+        "manual": "top_speed_kmh",
+        "expected": "top_speed_kmh"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_capacity_kwh"
+      },
+      {
+        "manual": "efficiency_wh_per_km",
+        "expected": "efficiency_wh_per_km"
+      },
+      {
+        "manual": "acceleration_0_100_s",
+        "expected": "acceleration_0_100_s"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charging_power_kw_dc"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "towing_capacity_kg"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_type_Lithium-ion"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CCS"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CHAdeMO"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Cabriolet"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Coupe"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Hatchback"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Liftback Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_SUV"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Small Passenger Van"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Station/Estate"
+      }
+    ]
+  },
+  {
+    "file": "model_GradientBoosting_range_retrained.joblib",
+    "expected_features_count": 42,
+    "expected_features_sample": [
+      "top_speed_kmh",
+      "battery_capacity_kwh",
+      "number_of_cells",
+      "torque_nm",
+      "efficiency_wh_per_km",
+      "acceleration_0_100_s",
+      "fast_charging_power_kw_dc",
+      "towing_capacity_kg",
+      "cargo_volume_l",
+      "seats",
+      "length_mm",
+      "width_mm",
+      "height_mm",
+      "battery_type_Lithium-ion",
+      "fast_charge_port_CCS",
+      "fast_charge_port_CHAdeMO",
+      "drivetrain_AWD",
+      "drivetrain_FWD",
+      "drivetrain_RWD",
+      "segment_A - Mini",
+      "segment_B - Compact",
+      "segment_C - Medium",
+      "segment_D - Large",
+      "segment_E - Executive",
+      "segment_F - Luxury",
+      "segment_G - Sports",
+      "segment_I - Luxury",
+      "segment_JA - Mini",
+      "segment_JB - Compact",
+      "segment_JC - Medium",
+      "segment_JD - Large",
+      "segment_JE - Executive",
+      "segment_JF - Luxury",
+      "segment_N - Passenger Van",
+      "car_body_type_Cabriolet",
+      "car_body_type_Coupe",
+      "car_body_type_Hatchback",
+      "car_body_type_Liftback Sedan",
+      "car_body_type_SUV",
+      "car_body_type_Sedan"
+    ],
+    "pipeline_steps": [
+      "pre",
+      "model"
+    ],
+    "interesting_attrs": {
+      "feature_names_in_": [
+        "top_speed_kmh",
+        "battery_capacity_kwh",
+        "number_of_cells",
+        "torque_nm",
+        "efficiency_wh_per_km",
+        "acceleration_0_100_s",
+        "fast_charging_power_kw_dc",
+        "towing_capacity_kg",
+        "cargo_volume_l",
+        "seats",
+        "length_mm",
+        "width_mm",
+        "height_mm",
+        "battery_type_Lithium-ion",
+        "fast_charge_port_CCS",
+        "fast_charge_port_CHAdeMO",
+        "drivetrain_AWD",
+        "drivetrain_FWD",
+        "drivetrain_RWD",
+        "segment_A - Mini"
+      ]
+    },
+    "manual_mapped": [
+      {
+        "manual": "top_speed_kmh",
+        "expected": "top_speed_kmh"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_capacity_kwh"
+      },
+      {
+        "manual": "efficiency_wh_per_km",
+        "expected": "efficiency_wh_per_km"
+      },
+      {
+        "manual": "acceleration_0_100_s",
+        "expected": "acceleration_0_100_s"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charging_power_kw_dc"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "towing_capacity_kg"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_type_Lithium-ion"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CCS"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CHAdeMO"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Cabriolet"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Coupe"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Hatchback"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Liftback Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_SUV"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Small Passenger Van"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Station/Estate"
+      }
+    ]
+  },
+  {
+    "file": "model_KNN_range_retrained.joblib",
+    "expected_features_count": 42,
+    "expected_features_sample": [
+      "top_speed_kmh",
+      "battery_capacity_kwh",
+      "number_of_cells",
+      "torque_nm",
+      "efficiency_wh_per_km",
+      "acceleration_0_100_s",
+      "fast_charging_power_kw_dc",
+      "towing_capacity_kg",
+      "cargo_volume_l",
+      "seats",
+      "length_mm",
+      "width_mm",
+      "height_mm",
+      "battery_type_Lithium-ion",
+      "fast_charge_port_CCS",
+      "fast_charge_port_CHAdeMO",
+      "drivetrain_AWD",
+      "drivetrain_FWD",
+      "drivetrain_RWD",
+      "segment_A - Mini",
+      "segment_B - Compact",
+      "segment_C - Medium",
+      "segment_D - Large",
+      "segment_E - Executive",
+      "segment_F - Luxury",
+      "segment_G - Sports",
+      "segment_I - Luxury",
+      "segment_JA - Mini",
+      "segment_JB - Compact",
+      "segment_JC - Medium",
+      "segment_JD - Large",
+      "segment_JE - Executive",
+      "segment_JF - Luxury",
+      "segment_N - Passenger Van",
+      "car_body_type_Cabriolet",
+      "car_body_type_Coupe",
+      "car_body_type_Hatchback",
+      "car_body_type_Liftback Sedan",
+      "car_body_type_SUV",
+      "car_body_type_Sedan"
+    ],
+    "pipeline_steps": [
+      "pre",
+      "model"
+    ],
+    "interesting_attrs": {
+      "feature_names_in_": [
+        "top_speed_kmh",
+        "battery_capacity_kwh",
+        "number_of_cells",
+        "torque_nm",
+        "efficiency_wh_per_km",
+        "acceleration_0_100_s",
+        "fast_charging_power_kw_dc",
+        "towing_capacity_kg",
+        "cargo_volume_l",
+        "seats",
+        "length_mm",
+        "width_mm",
+        "height_mm",
+        "battery_type_Lithium-ion",
+        "fast_charge_port_CCS",
+        "fast_charge_port_CHAdeMO",
+        "drivetrain_AWD",
+        "drivetrain_FWD",
+        "drivetrain_RWD",
+        "segment_A - Mini"
+      ]
+    },
+    "manual_mapped": [
+      {
+        "manual": "top_speed_kmh",
+        "expected": "top_speed_kmh"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_capacity_kwh"
+      },
+      {
+        "manual": "efficiency_wh_per_km",
+        "expected": "efficiency_wh_per_km"
+      },
+      {
+        "manual": "acceleration_0_100_s",
+        "expected": "acceleration_0_100_s"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charging_power_kw_dc"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "towing_capacity_kg"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_type_Lithium-ion"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CCS"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CHAdeMO"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Cabriolet"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Coupe"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Hatchback"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Liftback Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_SUV"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Small Passenger Van"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Station/Estate"
+      }
+    ]
+  },
+  {
+    "file": "model_LinearRegression_retrained.joblib",
+    "expected_features_count": 13,
+    "expected_features_sample": [
+      "top_speed_kmh",
+      "battery_capacity_kwh",
+      "number_of_cells",
+      "torque_nm",
+      "efficiency_wh_per_km",
+      "range_km",
+      "acceleration_0_100_s",
+      "fast_charging_power_kw_dc",
+      "towing_capacity_kg",
+      "cargo_volume_l",
+      "seats",
+      "length_mm",
+      "width_mm"
+    ],
+    "pipeline_steps": [
+      "scaler",
+      "model"
+    ],
+    "interesting_attrs": {
+      "feature_names_in_": [
+        "top_speed_kmh",
+        "battery_capacity_kwh",
+        "number_of_cells",
+        "torque_nm",
+        "efficiency_wh_per_km",
+        "range_km",
+        "acceleration_0_100_s",
+        "fast_charging_power_kw_dc",
+        "towing_capacity_kg",
+        "cargo_volume_l",
+        "seats",
+        "length_mm",
+        "width_mm"
+      ]
+    },
+    "manual_mapped": [
+      {
+        "manual": "top_speed_kmh",
+        "expected": "top_speed_kmh"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_capacity_kwh"
+      },
+      {
+        "manual": "efficiency_wh_per_km",
+        "expected": "efficiency_wh_per_km"
+      },
+      {
+        "manual": "efficiency_wh_per_km",
+        "expected": "range_km"
+      },
+      {
+        "manual": "acceleration_0_100_s",
+        "expected": "acceleration_0_100_s"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charging_power_kw_dc"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "towing_capacity_kg"
+      }
+    ]
+  },
+  {
+    "file": "model_RandomForest_range_retrained.joblib",
+    "expected_features_count": 42,
+    "expected_features_sample": [
+      "top_speed_kmh",
+      "battery_capacity_kwh",
+      "number_of_cells",
+      "torque_nm",
+      "efficiency_wh_per_km",
+      "acceleration_0_100_s",
+      "fast_charging_power_kw_dc",
+      "towing_capacity_kg",
+      "cargo_volume_l",
+      "seats",
+      "length_mm",
+      "width_mm",
+      "height_mm",
+      "battery_type_Lithium-ion",
+      "fast_charge_port_CCS",
+      "fast_charge_port_CHAdeMO",
+      "drivetrain_AWD",
+      "drivetrain_FWD",
+      "drivetrain_RWD",
+      "segment_A - Mini",
+      "segment_B - Compact",
+      "segment_C - Medium",
+      "segment_D - Large",
+      "segment_E - Executive",
+      "segment_F - Luxury",
+      "segment_G - Sports",
+      "segment_I - Luxury",
+      "segment_JA - Mini",
+      "segment_JB - Compact",
+      "segment_JC - Medium",
+      "segment_JD - Large",
+      "segment_JE - Executive",
+      "segment_JF - Luxury",
+      "segment_N - Passenger Van",
+      "car_body_type_Cabriolet",
+      "car_body_type_Coupe",
+      "car_body_type_Hatchback",
+      "car_body_type_Liftback Sedan",
+      "car_body_type_SUV",
+      "car_body_type_Sedan"
+    ],
+    "pipeline_steps": [
+      "pre",
+      "model"
+    ],
+    "interesting_attrs": {
+      "feature_names_in_": [
+        "top_speed_kmh",
+        "battery_capacity_kwh",
+        "number_of_cells",
+        "torque_nm",
+        "efficiency_wh_per_km",
+        "acceleration_0_100_s",
+        "fast_charging_power_kw_dc",
+        "towing_capacity_kg",
+        "cargo_volume_l",
+        "seats",
+        "length_mm",
+        "width_mm",
+        "height_mm",
+        "battery_type_Lithium-ion",
+        "fast_charge_port_CCS",
+        "fast_charge_port_CHAdeMO",
+        "drivetrain_AWD",
+        "drivetrain_FWD",
+        "drivetrain_RWD",
+        "segment_A - Mini"
+      ]
+    },
+    "manual_mapped": [
+      {
+        "manual": "top_speed_kmh",
+        "expected": "top_speed_kmh"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_capacity_kwh"
+      },
+      {
+        "manual": "efficiency_wh_per_km",
+        "expected": "efficiency_wh_per_km"
+      },
+      {
+        "manual": "acceleration_0_100_s",
+        "expected": "acceleration_0_100_s"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charging_power_kw_dc"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "towing_capacity_kg"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_type_Lithium-ion"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CCS"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CHAdeMO"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Cabriolet"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Coupe"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Hatchback"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Liftback Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_SUV"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Small Passenger Van"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Station/Estate"
+      }
+    ]
+  },
+  {
+    "file": "model_Ridge_range_retrained.joblib",
+    "expected_features_count": 42,
+    "expected_features_sample": [
+      "top_speed_kmh",
+      "battery_capacity_kwh",
+      "number_of_cells",
+      "torque_nm",
+      "efficiency_wh_per_km",
+      "acceleration_0_100_s",
+      "fast_charging_power_kw_dc",
+      "towing_capacity_kg",
+      "cargo_volume_l",
+      "seats",
+      "length_mm",
+      "width_mm",
+      "height_mm",
+      "battery_type_Lithium-ion",
+      "fast_charge_port_CCS",
+      "fast_charge_port_CHAdeMO",
+      "drivetrain_AWD",
+      "drivetrain_FWD",
+      "drivetrain_RWD",
+      "segment_A - Mini",
+      "segment_B - Compact",
+      "segment_C - Medium",
+      "segment_D - Large",
+      "segment_E - Executive",
+      "segment_F - Luxury",
+      "segment_G - Sports",
+      "segment_I - Luxury",
+      "segment_JA - Mini",
+      "segment_JB - Compact",
+      "segment_JC - Medium",
+      "segment_JD - Large",
+      "segment_JE - Executive",
+      "segment_JF - Luxury",
+      "segment_N - Passenger Van",
+      "car_body_type_Cabriolet",
+      "car_body_type_Coupe",
+      "car_body_type_Hatchback",
+      "car_body_type_Liftback Sedan",
+      "car_body_type_SUV",
+      "car_body_type_Sedan"
+    ],
+    "pipeline_steps": [
+      "pre",
+      "model"
+    ],
+    "interesting_attrs": {
+      "feature_names_in_": [
+        "top_speed_kmh",
+        "battery_capacity_kwh",
+        "number_of_cells",
+        "torque_nm",
+        "efficiency_wh_per_km",
+        "acceleration_0_100_s",
+        "fast_charging_power_kw_dc",
+        "towing_capacity_kg",
+        "cargo_volume_l",
+        "seats",
+        "length_mm",
+        "width_mm",
+        "height_mm",
+        "battery_type_Lithium-ion",
+        "fast_charge_port_CCS",
+        "fast_charge_port_CHAdeMO",
+        "drivetrain_AWD",
+        "drivetrain_FWD",
+        "drivetrain_RWD",
+        "segment_A - Mini"
+      ]
+    },
+    "manual_mapped": [
+      {
+        "manual": "top_speed_kmh",
+        "expected": "top_speed_kmh"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_capacity_kwh"
+      },
+      {
+        "manual": "efficiency_wh_per_km",
+        "expected": "efficiency_wh_per_km"
+      },
+      {
+        "manual": "acceleration_0_100_s",
+        "expected": "acceleration_0_100_s"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charging_power_kw_dc"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "towing_capacity_kg"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_type_Lithium-ion"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CCS"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CHAdeMO"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Cabriolet"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Coupe"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Hatchback"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Liftback Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_SUV"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Small Passenger Van"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Station/Estate"
+      }
+    ]
+  },
+  {
+    "file": "model_SVR_range_retrained.joblib",
+    "expected_features_count": 42,
+    "expected_features_sample": [
+      "top_speed_kmh",
+      "battery_capacity_kwh",
+      "number_of_cells",
+      "torque_nm",
+      "efficiency_wh_per_km",
+      "acceleration_0_100_s",
+      "fast_charging_power_kw_dc",
+      "towing_capacity_kg",
+      "cargo_volume_l",
+      "seats",
+      "length_mm",
+      "width_mm",
+      "height_mm",
+      "battery_type_Lithium-ion",
+      "fast_charge_port_CCS",
+      "fast_charge_port_CHAdeMO",
+      "drivetrain_AWD",
+      "drivetrain_FWD",
+      "drivetrain_RWD",
+      "segment_A - Mini",
+      "segment_B - Compact",
+      "segment_C - Medium",
+      "segment_D - Large",
+      "segment_E - Executive",
+      "segment_F - Luxury",
+      "segment_G - Sports",
+      "segment_I - Luxury",
+      "segment_JA - Mini",
+      "segment_JB - Compact",
+      "segment_JC - Medium",
+      "segment_JD - Large",
+      "segment_JE - Executive",
+      "segment_JF - Luxury",
+      "segment_N - Passenger Van",
+      "car_body_type_Cabriolet",
+      "car_body_type_Coupe",
+      "car_body_type_Hatchback",
+      "car_body_type_Liftback Sedan",
+      "car_body_type_SUV",
+      "car_body_type_Sedan"
+    ],
+    "pipeline_steps": [
+      "pre",
+      "model"
+    ],
+    "interesting_attrs": {
+      "feature_names_in_": [
+        "top_speed_kmh",
+        "battery_capacity_kwh",
+        "number_of_cells",
+        "torque_nm",
+        "efficiency_wh_per_km",
+        "acceleration_0_100_s",
+        "fast_charging_power_kw_dc",
+        "towing_capacity_kg",
+        "cargo_volume_l",
+        "seats",
+        "length_mm",
+        "width_mm",
+        "height_mm",
+        "battery_type_Lithium-ion",
+        "fast_charge_port_CCS",
+        "fast_charge_port_CHAdeMO",
+        "drivetrain_AWD",
+        "drivetrain_FWD",
+        "drivetrain_RWD",
+        "segment_A - Mini"
+      ]
+    },
+    "manual_mapped": [
+      {
+        "manual": "top_speed_kmh",
+        "expected": "top_speed_kmh"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_capacity_kwh"
+      },
+      {
+        "manual": "efficiency_wh_per_km",
+        "expected": "efficiency_wh_per_km"
+      },
+      {
+        "manual": "acceleration_0_100_s",
+        "expected": "acceleration_0_100_s"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charging_power_kw_dc"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "towing_capacity_kg"
+      },
+      {
+        "manual": "battery_capacity_kwh",
+        "expected": "battery_type_Lithium-ion"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CCS"
+      },
+      {
+        "manual": "fast_charging_power_kw_dc",
+        "expected": "fast_charge_port_CHAdeMO"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Cabriolet"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Coupe"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Hatchback"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Liftback Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_SUV"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Sedan"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Small Passenger Van"
+      },
+      {
+        "manual": "battery_type_Lithium-ion",
+        "expected": "car_body_type_Station/Estate"
+      }
+    ]
+  }
+]
